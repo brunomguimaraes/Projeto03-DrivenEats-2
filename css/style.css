@@ -1,0 +1,46 @@
+* {
+    box-sizing: border-box;
+}
+
+.top-bar {
+    width:100%;
+    height: 92px;
+    position: fixed;
+    top: 0;
+
+    background-color: #CF2B2B;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    color: #FFFFFF;
+    padding: 15px;
+}
+
+.top-bar .title {
+    font-size: 44px;
+}
+
+.top-bar .slogan {
+    font-size: 18px;
+}
+
+.bottom-bar {
+    width: 100%;
+    height: 92px;
+    line-height: 92px;
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+
+    background-color: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.bottom-bar button{
+    height: 61px;
+    width: 364px;
+
+    background-color: #CBCBCB;
+    border-radius: 50px;
+    font-size: 20px;
+    color: #FFFFFF;
+    border: none;
+}

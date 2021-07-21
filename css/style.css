@@ -23,7 +23,7 @@
 }
 
 .container {
-    padding-top: 122px;
+    padding: 122px 0;
     height: 100%;
     background-color: #E5E5E5;
 }
@@ -39,6 +39,14 @@
     display: flex;
     margin-top: 18px;
     margin-bottom: 30px;
+    overflow-x: scroll;
+
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.options-row::-webkit-scrollbar {
+    display: none;
 }
 
 .option {
@@ -46,7 +54,11 @@
     width: 172px;
     background-color: #FFFFFF;
     margin-left: 18px;
-    padding-left: 14px;
+    padding: 0 14px;
+}
+
+.option:last-child {
+    margin-right: 18px;
 }
 
 .option img {
@@ -90,6 +102,7 @@
 .bottom-bar button{
     height: 61px;
     width: 364px;
+    vertical-align: middle;
 
     background-color: #CBCBCB;
     border-radius: 50px;

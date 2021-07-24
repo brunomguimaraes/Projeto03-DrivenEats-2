@@ -4,15 +4,12 @@
     box-sizing: border-box;
 }
 
-body {
-    font-family: 'Roboto', sans-serif;
-}
-
 .top-bar {
     width:100%;
     height: 92px;
     position: fixed;
     top: 0;
+    z-index: 1;
 
     background-color: #CF2B2B;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -26,6 +23,8 @@ body {
 }
 
 .top-bar .slogan {
+
+    font-family: 'Roboto', sans-serif;
     font-size: 18px;
 }
 
@@ -60,12 +59,16 @@ body {
 .option {
     height: 216px;
     width: 172px;
+    border: none;
     border-radius: 9px;
+    font-family: 'Roboto', sans-serif;
     
     background-color: #FFFFFF;
     box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25);
     margin-left: 18px;
     padding: 0 14px;
+
+    text-align: start;
 }
 
 .option:last-child {
@@ -76,28 +79,48 @@ body {
     width: 144px;
     height: 87px;
     border-radius: 4px;
-    margin-top: 18px;
+    margin-top: 10px;
 }
 
 .option .name {
     font-size: 16px;
     font-weight: 700;
     color: #333333;
-    margin-top: 10px;
+    margin-top: 8px;
 }
 
 .option .detail {
     font-size: 15px;
     font-weight: 300;
+    
     color: #A6A6A6;
-    margin-top: 12px;
+    margin-top: 8px;
     margin-right: 14px;
 }
 
 .option .price {
     font-size: 16px;
     color: #000000;
-    margin-top: 12px;
+    margin-top: 8px;
+}
+
+.option ion-icon {
+    display: none;
+}
+
+.selected {
+    border: 5px solid #32B72F;
+    padding: 0 9px;
+    position: relative;
+}
+
+.selected ion-icon{
+    display: initial;
+    position: absolute;
+    bottom: 8px;
+    right: 4px;
+    font-size: 20px;
+    color: #32B72F;
 }
 
 .bottom-bar {
@@ -107,6 +130,7 @@ body {
     position: fixed;
     bottom: 0;
     text-align: center;
+    font-family: 'Roboto', sans-serif;
 
     background-color: #FFFFFF;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);

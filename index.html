@@ -26,28 +26,28 @@
                 <img src="media/baiao.jpg" alt="Baião de dois">
                 <p class="name">Baião de dois</p>
                 <p class="detail">Baião quentinho e bem gostosinho</p>
-                <p class="price">R$ 30,99</p>
+                <p class="price">R$ 30,60</p>
                 <ion-icon name="checkmark-circle"></ion-icon>
             </button>
             <button class="option" onclick="selectFood(this)">
                 <img src="media/bife-wellington.jpg" alt="Bife Wellington">
                 <p class="name">Bife Wellington</p>
                 <p class="detail">Sei que tu viu no masterchef</p>
-                <p class="price">R$ 83,99</p>
+                <p class="price">R$ 83,45</p>
                 <ion-icon name="checkmark-circle"></ion-icon>
             </button>
             <button class="option" onclick="selectFood(this)">
                 <img src="media/Yakisoba.jpg" alt="Yakisoba">
                 <p class="name">Yakisoba</p>
                 <p class="detail">Pode pedir com garfo</p>
-                <p class="price">R$ 44,99</p>
+                <p class="price">R$ 44,56</p>
                 <ion-icon name="checkmark-circle"></ion-icon>
             </button>
             <button class="option" onclick="selectFood(this)">
                 <img src="media/cuscuz.jpg" alt="Cuscuz com ovo">
                 <p class="name">Cuscuz com ovo</p>
                 <p class="detail">"Cuscuz é vida", Juliette Freire</p>
-                <p class="price">R$ 6,99</p>
+                <p class="price">R$ 6,39</p>
                 <ion-icon name="checkmark-circle"></ion-icon>
             </button>
         </div>
@@ -58,7 +58,7 @@
                 <img src="media/cana.jpg" alt="Caldo de cana">
                 <p class="name">Caldo de cana</p>
                 <p class="detail">Humm, com pastel então</p>
-                <p class="price">R$ 2,99</p>
+                <p class="price">R$ 2,23</p>
                 <ion-icon name="checkmark-circle"></ion-icon>
             </button>
             <button class="option" onclick="selectDrink(this)">
@@ -72,14 +72,14 @@
                 <img src="media/caja.jpg" alt="Suco de cajá">
                 <p class="name">Suco de cajá</p>
                 <p class="detail">O melhor suco que há</p>
-                <p class="price">R$ 5,99</p>
+                <p class="price">R$ 5,91</p>
                 <ion-icon name="checkmark-circle"></ion-icon>
             </button>
             <button class="option" onclick="selectDrink(this)">
                 <img src="media/agua.jpg" alt="Água">
                 <p class="name">Água</p>
                 <p class="detail">Tem quem diz que faz bem</p>
-                <p class="price">R$ 54,99</p>
+                <p class="price">R$ 74,82</p>
                 <ion-icon name="checkmark-circle"></ion-icon>
             </button>
         </div>
@@ -90,37 +90,59 @@
                 <img src="media/alfenim.jpg" alt="Alfenim">
                 <p class="name">Alfenim</p>
                 <p class="detail">Nem lembro da última vez que vi</p>
-                <p class="price">R$ 3,99</p>
+                <p class="price">R$ 3,90</p>
                 <ion-icon name="checkmark-circle"></ion-icon>
             </button>
             <button class="option" onclick="selectDesert(this)">
                 <img src="media/mousse-de-maracuja.jpg" alt="Mousse">
                 <p class="name">Mousse</p>
                 <p class="detail">Maracujá, o melhor mousse que há</p>
-                <p class="price">R$ 7,99</p>
+                <p class="price">R$ 7,56</p>
                 <ion-icon name="checkmark-circle"></ion-icon>
             </button>
             <button class="option" onclick="selectDesert(this)">
                 <img src="media/bolo-de-rolo.jpg" alt="Bolo de rolo">
                 <p class="name">Bolo de rolo</p>
                 <p class="detail">Tem quem diz que é rocombole</p>
-                <p class="price">R$ 4,99</p>
+                <p class="price">R$ 4,42</p>
                 <ion-icon name="checkmark-circle"></ion-icon>
             </button>
             <button class="option" onclick="selectDesert(this)">
                 <img src="media/cheesecake.jpg" alt="Cheesecake">
                 <p class="name">Cheesecake</p>
                 <p class="detail">Bolo de queijo? Só pra quem pode</p>
-                <p class="price">R$ 10,99</p>
+                <p class="price">R$ 10,04</p>
                 <ion-icon name="checkmark-circle"></ion-icon>
             </button>
         </div>
 
     </div>
 
-    <div class="bottom-bar"  onclick="Whatsapp(this)">
+    <div class="bottom-bar"  onclick="Order()">
             <button class="orderButton gray">Selecione os 3 itens para fechar o pedido</button>
     </div>
+
+    <div class="confirm-order hide">
+        <p class="title">Confirme seu pedido</p>
+        <div class="order">
+           <div class="items">
+                <p>{Food}</p>
+                <p>{Drink}</p>
+                <p>{Desert}</p>
+                <p><span class="bold">Total</span></p>
+           </div>
+           <div class="prices">
+                <p>{FoodPrice}</p>
+                <p>{DrinkPrice}</p>
+                <p>{DesertPrice}</p>
+                <p><span class="bold">R$ {TotalPrice}</span></p>
+           </div>
+        </div>
+        <button class="end-order" onclick="Whatsapp()">Tudo certo, pode pedir!</button>
+        <button class="cancel-order">Cancelar</button>
+    </div>
+
+    <div class="blur-background hide"></div>
 
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
     <script src="scripts.js"></script>

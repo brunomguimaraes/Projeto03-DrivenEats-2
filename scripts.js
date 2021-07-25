@@ -4,6 +4,8 @@ let desertSelected;
 let foodPrice;
 let drinkPrice;
 let desertPrice;
+let username;
+let address;
 
 function selectFood (option) {
 
@@ -58,10 +60,33 @@ function completeOrder () {
     }
 }
 
-function Whatsapp (button) {
+function Whatsapp () {
 
-    let message = `Olá, gostaria de fazer o pedido:\n- Prato: ${document.querySelector(".food .selected .name").innerText}\n- Bebida: ${document.querySelector(".drink .selected .name").innerText}\n- Sobremesa: ${document.querySelector(".desert .selected .name").innerText}\nTotal: R$ ${total}`;
+    let message = `Olá, gostaria de fazer o pedido:\n- Prato: ${foodSelected.querySelector(".name").innerText}\n- Bebida: ${drinkSelected.querySelector(".name").innerText}\n- Sobremesa: ${desertSelected.querySelector(".name").innerText}\nTotal: R$ ${total.toFixed(2)}\n\nNome: ${username}\nEndereço: ${address}`;
     let link = "https://wa.me/5519981266625?text=" + encodeURIComponent(message);
 
     window.location = link;
+}
+
+
+function Order () {
+
+    username = prompt("Digite seu nome:");
+    address = prompt("Digite seu endereço:");
+
+    const background = document.querySelector(".blur-background");
+    background.classList.remove("hide")
+    const panel = document.querySelector(".confirm-order");
+    panel.classList.remove("hide")
+
+    const order = document.querySelector(".order");
+
+    order.innerHTML = order.innerHTML
+        .replace("{Food}", foodSelected.querySelector(".name").innerText)
+        .replace("{Drink}", drinkSelected.querySelector(".name").innerText)
+        .replace("{Desert}", desertSelected.querySelector(".name").innerText)
+        .replace("{FoodPrice}", foodSelected.querySelector(".price").innerText.replace("R$ ", ""))
+        .replace("{DrinkPrice}", drinkSelected.querySelector(".price").innerText.replace("R$ ", ""))
+        .replace("{DesertPrice}", desertSelected.querySelector(".price").innerText.replace("R$ ", ""))
+        .replace("{TotalPrice}", String(total.toFixed(2)).replace(".", ","));
 }

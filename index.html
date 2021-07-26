@@ -14,14 +14,14 @@
 <body>
 
     <div class="top-bar">
-        <p class="title">DrivenEats</p>
+        <p class="logo">DrivenEats</p>
         <p class="slogan">Sua comida em 6 minutos</p>
     </div>
 
     <div class="container">
 
-        <p class="section">Primeiro, seu prato</p>
-        <div class="options-row food">
+        <p class="section-name">Primeiro, seu prato</p>
+        <div class="menu food">
             <button class="option" onclick="selectFood(this)">
                 <img src="media/baiao.jpg" alt="Baião de dois">
                 <p class="name">Baião de dois</p>
@@ -52,8 +52,8 @@
             </button>
         </div>
 
-        <p class="section">Agora, sua bebida</p>
-        <div class="options-row drink">
+        <p class="section-name">Agora, sua bebida</p>
+        <div class="menu drink">
             <button class="option" onclick="selectDrink(this)">
                 <img src="media/cana.jpg" alt="Caldo de cana">
                 <p class="name">Caldo de cana</p>
@@ -84,8 +84,8 @@
             </button>
         </div>
 
-        <p class="section">Por fim, sua sobremesa</p>
-        <div class="options-row desert">
+        <p class="section-name">Por fim, sua sobremesa</p>
+        <div class="menu desert">
             <button class="option" onclick="selectDesert(this)">
                 <img src="media/alfenim.jpg" alt="Alfenim">
                 <p class="name">Alfenim</p>
@@ -118,7 +118,7 @@
 
     </div>
 
-    <div class="bottom-bar"  onclick="Order()">
+    <div class="bottom-bar">
             <button class="orderButton gray">Selecione os 3 itens para fechar o pedido</button>
     </div>
 
@@ -129,13 +129,13 @@
                 <p>{Food}</p>
                 <p>{Drink}</p>
                 <p>{Desert}</p>
-                <p><span class="bold">Total</span></p>
+                <p class="bold">Total</p>
            </div>
            <div class="prices">
                 <p>{FoodPrice}</p>
                 <p>{DrinkPrice}</p>
                 <p>{DesertPrice}</p>
-                <p><span class="bold">R$ {TotalPrice}</span></p>
+                <p class="bold">R$ {TotalPrice}</p>
            </div>
         </div>
         <button class="end-order" onclick="Whatsapp()">Tudo certo, pode pedir!</button>
